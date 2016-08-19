@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PaddleController : MonoBehaviour {
 
+	public string axis = "Vertical";
 	public float speed = 1;
 
 	// Use this for initialization
@@ -13,7 +14,7 @@ public class PaddleController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		float y = Input.GetAxis ("Vertical");
+		float y = Input.GetAxis(axis);
 		Vector3 p = transform.position;
 		p.y += y * speed * Time.deltaTime;
 

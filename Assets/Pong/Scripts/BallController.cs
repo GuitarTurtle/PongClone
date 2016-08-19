@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class BallController : MonoBehaviour {
 
+	public int winScore = 7;
 	public Text scoreText;
 	public float initialSpeed = 4;
 	public float speedIncrease = 0.1f;
@@ -15,6 +17,7 @@ public class BallController : MonoBehaviour {
 	private Rigidbody body;
 	private float speed;
 	private bool gameOver = false;
+
 	void Start () {
 		speed = initialSpeed;
 		body = GetComponent<Rigidbody> ();
@@ -25,7 +28,6 @@ public class BallController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (gameOver) {
-			gameObject.SetActive(false);
 			return;
 		}
 
@@ -60,15 +62,24 @@ public class BallController : MonoBehaviour {
 	}
 
 	void CheckGameOver () {
-		if (leftScore == 7) {
+		if (leftScore == winScore) {
 			scoreText.text = "Left Wins";
 			gameOver = true;
 		}
-		else if (rightScore == 7) {
+		else if (rightScore == winScore) {
 			scoreText.text = "Right Wins";
 			gameOver = true;
 		}
 
+		if (gameOver) {
+			body.velocity = Vector2.zero;
+			StartCoroutine("ExitToMenuCoroutine");
+		}
+	}
+
+	IEnumerator ExitToMenuCoroutine () {
+		yield return new WaitForSeconds (5);
+		SceneManager.LoadScene("Menu");
 	}
 
 	void SetScoreUI () {
