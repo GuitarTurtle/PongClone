@@ -19,7 +19,7 @@ public class PaddleController : MonoBehaviour {
 		p.y += y * speed * Time.deltaTime;
 
 		Vector3 view = Camera.main.WorldToViewportPoint(p);
-		view.y = (view.y + 1) % 1f;
+		view.y = Mathf.Clamp(view.y, -0.05f, 1.05f);
 		transform.position = Camera.main.ViewportToWorldPoint(view);
 	}
 }

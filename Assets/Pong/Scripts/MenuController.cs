@@ -13,7 +13,7 @@ public class MenuController : MonoBehaviour {
 	}
 
 	public void StartMultiPlayer () {
-		SceneManager.LoadScene("SinglePlayer");
+		SceneManager.LoadScene("MultiPlayer");
 	}
 
 	public void ExitGame () {

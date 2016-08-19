@@ -1,0 +1,70 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1000013866140002}
+  m_IsPrefabParent: 1
+--- !u!1 &1000013866140002
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 4000013447387688}
+  - 114: {fileID: 114000012010039498}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4000013447387688
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013866140002}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.963138, y: 2.9170806, z: -9}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!114 &114000012010039498
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013866140002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f5edc519ec214b54a796394844461cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  music: {fileID: 8300000, guid: df4e02d1813f7444e8e43f67d7fc11db, type: 3}
+  autoStartMusic: 1
+  clips:
+  - {fileID: 8300000, guid: d50cf4ce25581594ba47905d8d575030, type: 3}
+  - {fileID: 8300000, guid: 320a2b0c4eee8bb4a8727a1c64744065, type: 3}
+  - {fileID: 8300000, guid: 2a5e698de837b9d4da11e804be5e6269, type: 3}
+  - {fileID: 8300000, guid: 016ae94d7a19ba54ca5a8d75275cd21a, type: 3}
+  - {fileID: 8300000, guid: 51cd151f035a1b14ebdb3196cdf7382a, type: 3}
+  mixers:
+  - {fileID: 243000010013235602, guid: 4585d4eeb9f554af9a05f28d7c090531, type: 2}
+  - {fileID: 243000011438620574, guid: 4585d4eeb9f554af9a05f28d7c090531, type: 2}
+  musicMixer: {fileID: 243000012900635084, guid: 4585d4eeb9f554af9a05f28d7c090531,
+    type: 2}
+  defaultSFXMixer: {fileID: 243000012705802454, guid: 4585d4eeb9f554af9a05f28d7c090531,
+    type: 2}
+  sfxSourcesCount: 5
+  minPlayInterval: 0.01
