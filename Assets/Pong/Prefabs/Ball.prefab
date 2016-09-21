@@ -195,6 +195,9 @@ MonoBehaviour:
   maxStretch: 0.5
   maxTrailSize: 0.2
   trail: {fileID: 96000013251154638}
+  leftColor: {r: 0.30569798, g: 0.44480738, b: 0.866, a: 1}
+  rightColor: {r: 0.853, g: 0.22604498, b: 0.22604498, a: 1}
+  centerColor: {r: 0.75735295, g: 0.7247084, b: 0.28400737, a: 1}
 --- !u!135 &135000012913581946
 SphereCollider:
   m_ObjectHideFlags: 1
